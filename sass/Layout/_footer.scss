@@ -1,0 +1,22 @@
+#container_footer {
+    background-color: map-get($background-color, gris_fonce);
+    max-width: 100%;
+}
+.container_footer {
+    @include footer;
+        &__logo {
+            width: 35%;
+            margin-bottom: 2rem;
+        }
+            a {
+                text-decoration: none;
+                color:white;
+                &:hover {
+                    cursor: pointer;
+                    color: $colour-tertiary;
+                }
+            }
+                &__categorie {
+                    padding-bottom: 0.5rem;
+                }
+}

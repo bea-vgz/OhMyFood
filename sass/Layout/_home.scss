@@ -1,0 +1,149 @@
+@mixin mobile {
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}
+
+body {
+    margin: 0;
+}
+.container_header {
+    @include mobile;
+    max-width: 100%;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 0.5rem #0000002e;
+    position: relative;
+    z-index: 1;
+}
+.container_localisation {
+    @include mobile;
+    display: flex;
+    background-color: map-get($background-color, gris_moyen);
+    position: relative;
+    padding: 1rem;
+    justify-content: center;
+        &__icon {
+            margin-right: 1rem;
+        }
+            &__text {
+                font-size: 1rem;
+                font-family: 'Roboto', sans-serif;
+            }
+}
+.container_fonctionnement {
+    @include mobile;
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+        &__cartouche {
+            list-style-type: none;
+            counter-reset: compteListe;
+            align-content: center;
+            margin-left: -1rem;
+        }
+            &__options {
+                max-width: 100%;
+                display: flex;
+                background-color: map-get($background-color, gris_clair);
+                height: 2rem;
+                border-radius: 1rem;
+                padding: 1rem 1rem;
+                align-items: center;
+                box-shadow: 0 0 10px #0000002e;
+                margin-bottom: 1rem;
+            }
+                &__options::before {
+                    counter-increment: compteListe 1;
+                    content: counter(compteListe) " ";
+                    background-color: $colour-primary;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    border-radius: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: -1.75rem;
+                }
+                    & i {
+                        color: $colour-quinary;
+                        margin-left: 1rem;
+                    }
+                        & a {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: map-get($font-size, h3);
+                            font-weight: 500;
+                            text-decoration: none;
+                            color: black;
+                            margin-left: 1.5rem;
+                        }
+                            &__titre {
+                                padding-top: 2.5rem;
+                                padding-left: 1rem;
+                            }
+}
+
+.intro_site {
+    background-color: $colour-quaternary;
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+        &__titre {
+            font-size: map-get($font-size, h1);
+        }
+            &__description {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+}
+
+.container_restaurants {
+    background-color: $colour-quaternary;
+        &__titre {
+            padding-top: 2.5rem;
+            padding-left: 1.2rem;
+        }
+}
+
+.cartouche_restaurants {
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+        &__bloc {
+            @include bloc;
+        }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+                &__figure {
+                    margin: 0rem;
+                }
+                    &__img {
+                        height: 10rem;
+                        object-fit: cover;
+                        object-position: center;
+                        width: 100%;
+                        border-radius: 1rem 1rem 0 0;
+                    }
+                        &__nouveau {
+                            @include nouveau;
+                        }
+                            &__blocfooter {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin-left: 1rem;
+                                margin-right: 1rem;
+                                margin-top: -0.7rem;
+                            }
+                                &__titre {
+                                    margin-bottom: 0.3rem;
+                                }
+                                    &__texte {
+                                        margin-top: 0.3rem;
+                                    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "site_omf_oc",
+  "version": "1.0.0",
+  "description": "Site_OhMyFood_OC",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/_main.scss:./css/style.css -w --style expanded",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bea-vgz/BeatriceVergez_3_30122020.git"
+  },
+  "author": "bea-vgz",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/bea-vgz/BeatriceVergez_3_30122020/issues"
+  },
+  "homepage": "https://github.com/bea-vgz/BeatriceVergez_3_30122020#readme",
+  "dependencies": {
+    "autoprefixer": "^8.1.0",
+    "postcss": "^8.2.2",
+    "postcss-cli": "^8.3.1"
+  }
+}

@@ -1,0 +1,98 @@
+@mixin mobile {
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.container_header_rts {
+    @include mobile;
+    display: flex;
+    max-width: 100%;
+    padding: 1.2rem;
+    position: relative;
+    color: black;
+    justify-content: center;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+            &__logo-arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+                &__arrow {
+                    padding: 1rem;
+                    position: absolute;
+                    top: 0.6rem;
+                    left: 0.5rem;
+                }
+}
+.img_restaurants {
+    width: 100%;
+    object-fit: cover;
+}
+#section_restaurants {
+    @include section_restaurants;
+}
+.header_menu_rts {
+    @include header_menu;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+}
+.container_rts {
+    padding: 1.2rem;
+    margin-top: -1rem;
+}
+
+.container_cartouches_entrees, .container_cartouches_plats, .container_cartouches_desserts {
+    margin-bottom: 3rem;
+}
+
+.container_cartouches_titre {
+    border-bottom: 4px solid $colour-tertiary;
+    padding-bottom: 0.3rem;
+    width: 12%;
+}
+
+.cartouche_entrees, .cartouche_plats, .cartouche_desserts {
+    @include bloc;
+        &__bloctext {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-left: 0.8rem;
+            padding-right: 1.1rem;
+        }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+                &__text {
+                    margin-top: -0.7rem;
+                }
+                    &__titre {
+                        margin-bottom: 0.4rem;
+                    }
+                        &__texte {
+                            margin-top: 0.3rem;
+                            font-size: 0.9rem;
+                        }
+                            &__price {
+                                font-family: 'Roboto', sans-serif;
+                                font-weight: 700;
+                                margin-bottom: 0.8rem;
+                            }
+}   
+.button {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+}
