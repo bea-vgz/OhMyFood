@@ -27,6 +27,14 @@ $background-color : (gris_clair:$colour-quaternary, gris_fonce:$colour-quinary, 
     font-weight: lighter;
     padding: 1.2rem;
     padding-bottom: 3rem;
+    @include desktop {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+        text-align: center;
+        margin: auto;
+    }
 }
 
 @mixin bloc {
@@ -57,10 +65,19 @@ $background-color : (gris_clair:$colour-quaternary, gris_fonce:$colour-quinary, 
     background-color: $colour-quaternary;
     border-radius: 2rem 2rem 0 0;
     margin-top: -3rem;
+    @include desktop {
+        margin-top: -6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 @mixin section_restaurants {
     background-color: $colour-quaternary;
     border-radius: 2rem 2rem 0 0;
     position: relative;
+    @include desktop {
+        text-align: center;
+        margin: auto;
+    }
 }

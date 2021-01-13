@@ -3,11 +3,15 @@
         @content;
     }
 }
+@mixin desktop {
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+}
 
 body {
     margin: 0;
 }
-
 .container_header_rts {
     @include mobile;
     display: flex;
@@ -35,9 +39,15 @@ body {
 .img_restaurants {
     width: 100%;
     object-fit: cover;
+    @include desktop {
+        height: 35rem;
+    }
 }
 #section_restaurants {
     @include section_restaurants;
+    @include desktop {
+        width: 85%;
+    }
 }
 .header_menu_rts {
     @include header_menu;
@@ -49,16 +59,27 @@ body {
 .container_rts {
     padding: 1.2rem;
     margin-top: -1rem;
+    @include desktop {
+        padding: 1.5rem;
+        display:flex;
+        justify-content: space-between;
+    }
 }
 
 .container_cartouches_entrees, .container_cartouches_plats, .container_cartouches_desserts {
     margin-bottom: 3rem;
+    @include desktop {
+        width: 32%;
+        margin-bottom: 0;
+    }
 }
 
 .container_cartouches_titre {
     border-bottom: 4px solid $colour-tertiary;
     padding-bottom: 0.3rem;
     width: 12%;
+    position: relative;
+    justify-content: flex-start;
 }
 
 .cartouche_entrees, .cartouche_plats, .cartouche_desserts {
@@ -76,6 +97,7 @@ body {
             }
                 &__text {
                     margin-top: -0.7rem;
+                    text-align: left;
                 }
                     &__titre {
                         margin-bottom: 0.4rem;
@@ -93,6 +115,6 @@ body {
 .button {
     display:flex;
     justify-content: center;
-    margin-bottom: 2.5rem;
-    margin-top: 2rem;
+    padding-bottom: 2.5rem;
+    margin-top: 1rem;
 }
