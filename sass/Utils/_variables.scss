@@ -71,10 +71,21 @@ $background-color : (gris_clair:$colour-quaternary, gris_fonce:$colour-quinary, 
 
 @keyframes loader {
     0% {
-        transform: rotate(0deg);
+        opacity: 1;
     }
     100% {
         opacity: 1;
         transform: rotate(360deg);
     }
 }
+@keyframes apparition_plats {
+    0% {
+      transform: scale(0.2);
+      opacity:0;
+    }
+    100% {
+      transform: scale(1);
+      opacity:1;
+    }
+  }
+$anim-dur: 0.5s;

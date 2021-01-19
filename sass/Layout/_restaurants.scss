@@ -50,7 +50,6 @@
     }
     .container_cartouches_entrees, .container_cartouches_plats, .container_cartouches_desserts {
         margin-bottom: 3rem;
-        animation-name: apparition 0.5s;
     }
     .container_cartouches_titre {
         border-bottom: 4px solid $colour-tertiary;
@@ -59,8 +58,12 @@
         position: relative;
         justify-content: flex-start;
     }
+
     .cartouche_entrees, .cartouche_plats, .cartouche_desserts {
         @include bloc;
+        animation: apparition_plats $anim-dur backwards;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
             &__bloctext {
                 display: flex;
                 padding-left: 0.8rem;
