@@ -9,11 +9,11 @@
 }
 @keyframes apparition_plats {
   0% {
-    transform: scale(0.2);
+    transform: translateY(100%);
     opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0%);
     opacity: 1;
   }
 }
@@ -512,9 +512,9 @@ body {
   margin-bottom: 1.2rem;
   position: relative;
   overflow: hidden;
-  animation: apparition_plats 0.5s backwards;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
+  animation: apparition_plats 1.5s backwards;
+  animation-direction: alternate;
+  transition: cubic-bezier(0.12, 1.03, 0.34, 1);
 }
 .cartouche_entrees__bloctext, .cartouche_plats__bloctext, .cartouche_desserts__bloctext {
   display: flex;
