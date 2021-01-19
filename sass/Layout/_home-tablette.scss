@@ -1,0 +1,71 @@
+/* Homepage version tablette */
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    body {
+        margin: 0;
+    }
+    .container_fonctionnement {
+        display:flex;
+        align-items: center;
+        width: 100%;
+            &__cartouche {
+                list-style-type: none;
+                counter-reset: compteListe;
+                align-content: center;
+                margin-left: -1rem;
+                justify-content: space-between;
+                width: 90%;
+            }
+                &__options {
+                    max-width: 100%;
+                    display: flex;
+                    background-color: map-get($background-color, gris_clair);
+                    height: 2rem;
+                    border-radius: 1rem;
+                    padding: 1rem 1rem;
+                    align-items: center;
+                    box-shadow: 0 0 10px #0000002e;
+                    margin-bottom: 1rem;
+                    margin-left: 0.5rem;
+                    margin-right: 1.5rem;
+                    flex: 1;
+                }
+                    & i {
+                        color: $colour-quinary;
+                        margin-left: 1rem;
+                    }
+                        & a {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: map-get($font-size, h3);
+                            font-weight: 500;
+                            text-decoration: none;
+                            color: inherit;
+                            margin-left: 1.5rem;
+                        }
+                            &__titre {
+                                padding-top: 1rem;
+                                padding-left: 0;
+                            }
+    }
+    .container_restaurants {
+        background-color: $colour-quaternary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            &__titre {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 0;
+            }
+    }
+    .container_footer {
+        @include footer;
+        justify-content: space-between;
+        padding: 2rem;
+        text-align: center;
+        margin: auto;
+            &__logo {
+                width: 15%;
+            }
+    }
+}

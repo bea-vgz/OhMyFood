@@ -1,6 +1,7 @@
-.intro_site_button {
+.intro_site_button, .commande_button {
     @include button_pink;
-}
-.commande_button {
-    @include button_pink;
+        &:hover {
+           box-shadow: 0.25rem 0.25rem 16px #0000007a;
+           opacity: 0.9;
+        }
 }

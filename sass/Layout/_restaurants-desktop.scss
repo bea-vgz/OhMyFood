@@ -1,0 +1,35 @@
+/* Restaurants version desktop */
+
+@media screen and (min-width: 1024px){
+    body {
+        margin: 0;
+    }
+    .img_restaurants {
+        height: 35rem;
+    }
+    #section_restaurants {
+        @include section_restaurants;
+        margin: auto;
+        width: 85%;
+    }
+    .header_menu_rts {
+        @include header_menu;
+        margin-top: -6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+    }
+    .container_rts {
+        padding: 1.5rem;
+        margin-top: -1rem;
+        display:flex;
+        justify-content: space-between;
+    }
+    .container_cartouches_entrees, .container_cartouches_plats, .container_cartouches_desserts {
+            width: 32%;
+            margin-bottom: 0;
+    }
+}

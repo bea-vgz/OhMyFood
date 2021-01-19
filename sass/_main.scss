@@ -1,7 +1,14 @@
 @import "./Utils/variables";
+@import "./Utils/animations";
 @import "./Base/typography";
+
 @import "./Layout/home";
-@import "./Layout/media";
-@import "./Layout/footer";
-@import "./Components/button";
+@import "./Layout/home-desktop";
+@import "./Layout/home-tablette";
+@import "./Layout/@media";
 @import "./Layout/restaurants";
+@import "./Layout/restaurants-desktop";
+@import "./Layout/restaurants-tablette";
+
+@import "./Components/button";
+

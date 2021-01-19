@@ -1,0 +1,68 @@
+/* Homepage version desktop */
+
+@media screen and (min-width: 1024px){
+    body {
+        margin: 0;
+    }   
+    .container_fonctionnement {
+        display:flex;
+        align-items: center;
+        width: 100%;
+            &__cartouche {
+                display: flex;
+                justify-content: space-between;
+                width: 85%;
+            }
+                &__options {
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+                    flex: 1;
+                }
+                    &__titre {
+                        padding-top: 1rem;
+                        padding-left: 0;
+                    }
+    }
+    .container_restaurants {
+        background-color: $colour-quaternary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            &__titre {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 0;
+            }
+    }
+    .cartouche_restaurants {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 85%;
+            &__bloc {
+                @include bloc;
+                width: 48%;
+                margin-bottom: 2.5rem;
+            }
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+                    &__nouveau {
+                        @include nouveau;
+                    }
+    }
+    .container_footer {
+        @include footer;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+        text-align: center;
+        margin: auto;
+            &__logo {
+                width: 12%;
+            }
+    }
+}

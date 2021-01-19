@@ -1,196 +1,190 @@
-@mixin mobile {
-    @media screen and (max-width: 480px){
-        @content;
-    }
-}
+/* Mobile first Homepage */
 
-@mixin desktop {
-    @media screen and (min-width: 1024px){
-        @content;
-    }
-}
-
-body {
-    margin: 0;
-}
-.container_header {
-    max-width: 100%;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 0 0.5rem #0000002e;
-    position: relative;
-    z-index: 1;
-}
-.container_localisation {
-    @include mobile;
-    display: flex;
-    background-color: map-get($background-color, gris_moyen);
-    position: relative;
-    padding: 1rem;
-    justify-content: center;
-        &__icon {
-            margin-right: 1rem;
+    @mixin mobile {
+        @media screen and (max-width: 480px){
+            @content;
         }
-            &__text {
-                font-size: 1rem;
-                font-family: 'Roboto', sans-serif;
-            }
-}
-.container_fonctionnement {
-    @include mobile;
-    display: flex;
-    flex-direction: column;
-    width: 97%;
-    @include desktop {
-        display:flex;
-        align-items: center;
+    }
+    
+    body {
+        margin: 0;
+    }
+    .loader {
+        position: fixed;
+        height: 100%;
         width: 100%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        animation-delay: 1.5s;
+            &__icon {
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                border: 18px solid $colour-primary;
+                border-top: 18px solid $colour-secondary;
+                animation: spin linear infinite 2s;
+                animation-name: loader;
+            }
     }
-        &__cartouche {
-            list-style-type: none;
-            counter-reset: compteListe;
-            align-content: center;
-            margin-left: -1rem;
-            @include desktop {
-                display: flex;
-                justify-content: space-between;
-                width: 80%;
+    .container_header {
+        max-width: 100%;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 0 0.5rem #0000002e;
+        z-index: 1;
+    }
+    .container_localisation {
+        display: flex;
+        background-color: map-get($background-color, gris_moyen);
+        position: relative;
+        padding: 1rem;
+        justify-content: center;
+            &__icon {
+                margin-right: 1rem;
             }
-        }
-            &__options {
-                max-width: 100%;
-                display: flex;
-                background-color: map-get($background-color, gris_clair);
-                height: 2rem;
-                border-radius: 1rem;
-                padding: 1rem 1rem;
-                align-items: center;
-                box-shadow: 0 0 10px #0000002e;
-                margin-bottom: 1rem;
-                    @include desktop {
-                        margin-left: 1.5rem;
-                        margin-right: 1.5rem;
-                        flex: 1;
-                    }
-            }
-            
-                &__options::before {
-                    counter-increment: compteListe 1;
-                    content: counter(compteListe) " ";
-                    background-color: $colour-primary;
-                    color: white;
+                &__text {
+                    font-size: 1rem;
                     font-family: 'Roboto', sans-serif;
-                    height: 1.6rem;
-                    width: 1.6rem;
-                    border-radius: 2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-left: -1.75rem;
                 }
-                    & i {
-                        color: $colour-quinary;
-                        margin-left: 1rem;
-                    }
-                        & a {
-                            font-family: 'Roboto', sans-serif;
-                            font-size: map-get($font-size, h3);
-                            font-weight: 500;
-                            text-decoration: none;
-                            color: black;
-                            margin-left: 1.5rem;
-                        }
-                            &__titre {
-                                padding-top: 2.5rem;
-                                padding-left: 1rem;
-                                @include desktop {
-                                    padding-top: 1rem;
-                                    padding-left: 0;
-                                }
-                            }
-}
-
-.intro_site {
-    background-color: $colour-quaternary;
-    padding: 1.5rem;
-    padding-bottom: 3rem;
-    text-align: center;
-        &__titre {
-            font-size: map-get($font-size, h1);
-        }
-            &__description {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
-}
-
-.container_restaurants {
-    background-color: $colour-quaternary;
-    @include desktop {
+    }
+    .container_fonctionnement {
         display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-        &__titre {
-            padding-top: 2.5rem;
-            padding-left: 1.2rem;
-            @include desktop {
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-                padding-left: 0;
+        width: 97%;
+            &__cartouche {
+                list-style-type: none;
+                counter-reset: compteListe;
+                align-content: center;
+                margin-left: -1rem;
             }
-        }
-}
-
-.cartouche_restaurants {
-    display:flex;
-    flex-direction: column;
-    width: 90%;
-    margin: auto;
-    @include desktop {
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 85%;
-    }
-        &__bloc {
-            @include bloc;
-            @include desktop {
-                width: 48%;
-                margin-bottom: 2.5rem;
-            }
-        }
-            a{
-                text-decoration: none;
-                color: black;
-            }
-                &__figure {
-                    margin: 0rem;
+                &__options {
+                    max-width: 100%;
+                    display: flex;
+                    background-color: map-get($background-color, gris_clair);
+                    height: 2rem;
+                    border-radius: 1rem;
+                    padding: 1rem 1rem;
+                    align-items: center;
+                    box-shadow: 0 0 10px #0000002e;
+                    margin-bottom: 1rem;
                 }
-                    &__img {
-                        height: 10rem;
-                        object-fit: cover;
-                        object-position: center;
-                        width: 100%;
-                        border-radius: 1rem 1rem 0 0;
+                    &__options::before {
+                        counter-increment: compteListe 1;
+                        content: counter(compteListe) " ";
+                        background-color: $colour-primary;
+                        color: white;
+                        font-family: 'Roboto', sans-serif;
+                        height: 1.6rem;
+                        width: 1.6rem;
+                        border-radius: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: -1.75rem;
                     }
-                        &__nouveau {
-                            @include nouveau;
+                        & i {
+                            color: $colour-quinary;
+                            margin-left: 1rem;
                         }
-                            &__blocfooter {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                margin-left: 1rem;
-                                margin-right: 1rem;
-                                margin-top: -0.7rem;
+                            & a {
+                                font-family: 'Roboto', sans-serif;
+                                font-size: map-get($font-size, h3);
+                                font-weight: 500;
+                                text-decoration: none;
+                                color: black;
+                                margin-left: 1.5rem;
                             }
                                 &__titre {
-                                    margin-bottom: 0.3rem;
+                                    padding-top: 2.5rem;
+                                    padding-left: 1rem;
                                 }
-                                    &__texte {
-                                        margin-top: 0.3rem;
+    }
+    .intro_site {
+        background-color: $colour-quaternary;
+        padding: 1.5rem;
+        padding-bottom: 3rem;
+        text-align: center;
+            &__titre {
+                font-size: map-get($font-size, h1);
+            }
+                &__description {
+                    font-size: 1rem;
+                    margin-bottom: 2rem;
+                }
+    }
+    .container_restaurants {
+        background-color: $colour-quaternary;
+            &__titre {
+                padding-top: 2.5rem;
+                padding-left: 1.2rem;
+            }
+    }
+    .cartouche_restaurants {
+        display:flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+            &__bloc {
+                @include bloc;
+            }
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+                    &__nouveau {
+                        @include nouveau;
+                    }
+                        &__figure {
+                            margin: 0rem;
+                        }
+                            &__img {
+                                height: 10rem;
+                                object-fit: cover;
+                                object-position: center;
+                                width: 100%;
+                                border-radius: 1rem 1rem 0 0;
+                            }
+                                &__blocfooter {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    margin-left: 1rem;
+                                    margin-right: 1rem;
+                                    margin-top: -0.7rem;
+                                }
+                                    &__titre {
+                                        margin-bottom: 0.3rem;
                                     }
-}
-
+                                        &__texte {
+                                            margin-top: 0.3rem;
+                                        }
+    }
+    #container_footer {
+        background-color: map-get($background-color, gris_fonce);
+        max-width: 100%;
+    }
+    .container_footer {
+        @include footer;
+            &__logo {
+                width: 35%;
+                margin-bottom: 2rem;
+            }
+                a {
+                    text-decoration: none;
+                    color:white;
+                    &:hover {
+                        cursor: pointer;
+                        color: $colour-tertiary;
+                    }
+                }
+                    &__categorie {
+                        padding-bottom: 0.5rem;
+                    }
+    }
+    .categorie_icon {
+        padding-right: 0.5rem;
+        width: 1.2rem;
+    }
