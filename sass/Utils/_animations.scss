@@ -19,24 +19,17 @@
 @keyframes loader_background {
     100% {
         opacity: 0;
-        z-index: -10;
+        z-index: -1;
     }
 }
 @keyframes apparition_plats {
     0% {
         transform:translateY(100%);
-        opacity:0;
+        opacity: 0;
     }
     100% {
         transform:translateY(0%);
-        opacity:1;
+        opacity: 1;
     }
 }
 $anim-dur: 0.6s;
-
-@keyframes confirmation_icon {
-    100% {
-        transform: rotate(180deg);
-        transition-duration: 0.7s;
-    }
-}
