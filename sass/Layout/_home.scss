@@ -89,6 +89,7 @@
                     }
                         & i {
                             color: $colour-quinary;
+                            opacity: 0.5;
                             margin-left: 1rem;
                         }
                             & a {
@@ -98,9 +99,6 @@
                                 text-decoration: none;
                                 color: black;
                                 margin-left: 1.5rem;
-                                    &:hover {
-                                        color: $colour-primary;
-                                    }
                             }
                                 &__titre {
                                     padding-top: 2.5rem;

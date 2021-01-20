@@ -155,6 +155,7 @@ body {
 }
 .container_fonctionnement i {
   color: #353535;
+  opacity: 0.5;
   margin-left: 1rem;
 }
 .container_fonctionnement a {
@@ -164,9 +165,6 @@ body {
   text-decoration: none;
   color: black;
   margin-left: 1.5rem;
-}
-.container_fonctionnement a:hover {
-  color: #9356DC;
 }
 .container_fonctionnement__titre {
   padding-top: 2.5rem;
