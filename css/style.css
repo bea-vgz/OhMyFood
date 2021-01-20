@@ -165,6 +165,9 @@ body {
   color: black;
   margin-left: 1.5rem;
 }
+.container_fonctionnement a:hover {
+  color: #9356DC;
+}
 .container_fonctionnement__titre {
   padding-top: 2.5rem;
   padding-left: 1rem;
@@ -245,6 +248,9 @@ body {
 }
 .cartouche_restaurants__texte {
   margin-top: 0.3rem;
+}
+.cartouche_restaurants__coeur:hover {
+  color: linear-gradient(#FF79DA, #9356DC);
 }
 
 #container_footer {

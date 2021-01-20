@@ -98,6 +98,9 @@
                                 text-decoration: none;
                                 color: black;
                                 margin-left: 1.5rem;
+                                    &:hover {
+                                        color: $colour-primary;
+                                    }
                             }
                                 &__titre {
                                     padding-top: 2.5rem;
@@ -163,6 +166,11 @@
                                         &__texte {
                                             margin-top: 0.3rem;
                                         }
+                                            &__coeur {
+                                                &:hover {
+                                                    color: linear-gradient($colour-secondary, $colour-primary);
+                                                }
+                                            }
     }
     #container_footer {
         background-color: map-get($background-color, gris_fonce);
