@@ -2,9 +2,24 @@
   0% {
     opacity: 1;
   }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.2;
+  }
   100% {
-    opacity: 1;
+    opacity: 0;
     transform: rotate(360deg);
+  }
+}
+@keyframes loader_background {
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 @keyframes apparition_plats {
@@ -15,6 +30,12 @@
   100% {
     transform: translateY(0%);
     opacity: 1;
+  }
+}
+@keyframes confirmation_icon {
+  100% {
+    transform: rotate(180deg);
+    transition-duration: 0.7s;
   }
 }
 p {
@@ -64,7 +85,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.616);
+  animation-name: loader_background;
+  animation-delay: 2.3s;
+  animation-fill-mode: both;
 }
 .loader__icon {
   height: 100px;
@@ -72,9 +96,8 @@ body {
   border-radius: 50%;
   border: 18px solid #9356DC;
   border-top: 18px solid #FF79DA;
-  animation: spin 2s linear infinite;
+  animation: spin linear 2.5s;
   animation-name: loader;
-  animation-iteration-count: 2;
 }
 
 .container_header {
@@ -459,6 +482,9 @@ body {
   top: 0.6rem;
   left: 0.5rem;
 }
+.container_header_rts__arrow:hover {
+  color: #99E2D0;
+}
 
 .img_restaurants {
   width: 100%;
@@ -512,9 +538,8 @@ body {
   margin-bottom: 1.2rem;
   position: relative;
   overflow: hidden;
-  animation: apparition_plats 1.5s backwards;
-  animation-direction: alternate;
-  transition: cubic-bezier(0.12, 1.03, 0.34, 1);
+  animation: apparition_plats 0.6s;
+  animation-fill-mode: both;
 }
 .cartouche_entrees__bloctext, .cartouche_plats__bloctext, .cartouche_desserts__bloctext {
   display: flex;
@@ -558,14 +583,10 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
-  width: 4rem;
+  width: 4.5rem;
   height: auto;
-  margin: -1rem -5.1rem -1rem 1rem;
-  margin-left: 1rem;
-  transition-duration: 1000ms;
-}
-.cartouche_entrees__confirmation:hover, .cartouche_plats__confirmation:hover, .cartouche_desserts__confirmation:hover {
-  margin-right: -1rem;
+  margin: 0rem -5.6rem 0rem 1rem;
+  transition-duration: 0.7s;
 }
 .cartouche_entrees__bloc, .cartouche_plats__bloc, .cartouche_desserts__bloc {
   background-color: white;
@@ -574,12 +595,35 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(180deg);
-  transition-duration: .5s;
   border-radius: 1rem;
+  transform: rotate(180deg);
+  transition-duration: 0.7s;
 }
 .cartouche_entrees__icon, .cartouche_plats__icon, .cartouche_desserts__icon {
   color: #99E2D0;
+}
+.cartouche_entrees:hover .cartouche_entrees__confirmation, .cartouche_plats:hover .cartouche_entrees__confirmation, .cartouche_desserts:hover .cartouche_entrees__confirmation, .cartouche_entrees:hover .cartouche_plats__confirmation, .cartouche_plats:hover .cartouche_plats__confirmation, .cartouche_desserts:hover .cartouche_plats__confirmation, .cartouche_entrees:hover .cartouche_desserts__confirmation, .cartouche_plats:hover .cartouche_desserts__confirmation, .cartouche_desserts:hover .cartouche_desserts__confirmation {
+  margin-right: -1.1rem;
+  animation-timing-function: linear;
+}
+.cartouche_entrees:hover .cartouche_entrees__bloc, .cartouche_plats:hover .cartouche_entrees__bloc, .cartouche_desserts:hover .cartouche_entrees__bloc, .cartouche_entrees:hover .cartouche_plats__bloc, .cartouche_plats:hover .cartouche_plats__bloc, .cartouche_desserts:hover .cartouche_plats__bloc, .cartouche_entrees:hover .cartouche_desserts__bloc, .cartouche_plats:hover .cartouche_desserts__bloc, .cartouche_desserts:hover .cartouche_desserts__bloc {
+  transform: rotate(0deg);
+}
+
+.loading-1 {
+  animation-delay: 0.2s;
+}
+
+.loading-2 {
+  animation-delay: 0.4s;
+}
+
+.loading-3 {
+  animation-delay: 0.6s;
+}
+
+.loading-4 {
+  animation-delay: 0.8s;
 }
 
 .button {

@@ -28,6 +28,9 @@
                         position: absolute;
                         top: 0.6rem;
                         left: 0.5rem;
+                            &:hover {
+                                color: $colour-tertiary;
+                            }
                     }
     }
     .img_restaurants {
@@ -60,9 +63,8 @@
     }
     .cartouche_entrees, .cartouche_plats, .cartouche_desserts {
         @include bloc;
-        animation: apparition_plats $anim-dur backwards;
-        animation-direction: alternate;
-        transition: cubic-bezier(.12,1.03,.34,1);
+        animation: apparition_plats $anim-dur;
+        animation-fill-mode: both;
             &__bloctext {
                 display: flex;
                 padding-left: 0.8rem;
@@ -105,14 +107,10 @@
                                         align-items: center;
                                         justify-content: center;
                                         background-color: $colour-tertiary;
-                                        width: 4rem;
+                                        width: 4.5rem;
                                         height: auto;
-                                        margin: -1rem -5.1rem -1rem 1rem;
-                                        margin-left: 1rem;
-                                        transition-duration: 1000ms;
-                                            &:hover {
-                                                margin-right: -1rem;
-                                            }
+                                        margin: 0rem -5.6rem 0rem 1rem;
+                                        transition-duration: 0.7s;
                                     }
                                             &__bloc {
                                                 background-color: white;
@@ -121,15 +119,33 @@
                                                 display: flex;
                                                 align-items: center;
                                                 justify-content: center;
-                                                transform: rotate(180deg);
-                                                transition-duration: .5s;
                                                 border-radius: 1rem;
+                                                transform: rotate(180deg);
+                                                transition-duration: 0.7s;
                                             }
                                                     &__icon {
                                                         color: $colour-tertiary;
                                                     }
+                                                        &:hover &__confirmation {
+                                                            margin-right: -1.1rem;
+                                                            animation-timing-function: linear;
+                                                        }
+                                                            &:hover &__bloc {
+                                                                transform: rotate(0deg);
+                                                            }
     }
-    
+    .loading-1 {
+        animation-delay: 0.2s;
+    }
+    .loading-2 {
+        animation-delay: 0.4s;
+    }
+    .loading-3 {
+        animation-delay: 0.6s;
+    }
+    .loading-4{
+        animation-delay: 0.8s;
+    }
     .button {
         display:flex;
         justify-content: center;

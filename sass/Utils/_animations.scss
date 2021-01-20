@@ -1,0 +1,42 @@
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    40%{
+        opacity:0.8;
+    }
+    60%{
+        opacity:0.4;
+    }
+    80%{
+        opacity:0.2;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+@keyframes loader_background {
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+@keyframes apparition_plats {
+    0% {
+        transform:translateY(100%);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0%);
+        opacity:1;
+    }
+}
+$anim-dur: 0.6s;
+
+@keyframes confirmation_icon {
+    100% {
+        transform: rotate(180deg);
+        transition-duration: 0.7s;
+    }
+}

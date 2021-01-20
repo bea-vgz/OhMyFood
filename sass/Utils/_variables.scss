@@ -68,24 +68,3 @@ $background-color : (gris_clair:$colour-quaternary, gris_fonce:$colour-quinary, 
     border-radius: 2rem 2rem 0 0;
     position: relative;
 }
-
-@keyframes loader {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-        transform: rotate(360deg);
-    }
-}
-@keyframes apparition_plats {
-    0% {
-        transform:translateY(100%);
-        opacity:0;
-    }
-    100% {
-        transform:translateY(0%);
-        opacity:1;
-    }
-  }
-$anim-dur: 1.5s;

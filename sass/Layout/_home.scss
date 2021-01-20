@@ -17,16 +17,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0.616);
+        animation-name: loader_background;
+        animation-delay: 2.3s;
+        animation-fill-mode: both;
             &__icon {
                 height: 100px;
                 width: 100px;
                 border-radius: 50%;
                 border: 18px solid $colour-primary;
                 border-top: 18px solid $colour-secondary;
-                animation: spin 2s linear infinite;
+                animation: spin linear 2.5s;
                 animation-name: loader;
-                animation-iteration-count: 2;
             }
     }
     .container_header {
