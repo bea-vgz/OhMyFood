@@ -47,6 +47,13 @@
                                 padding-left: 0;
                             }
     }
+    .purple-option {
+        background-color: $colour-purple-opacity;
+        &__icon {
+            color: $colour-primary;
+            margin-left: 1rem;
+        }
+    }
     .container_restaurants {
         background-color: $colour-quaternary;
         display: flex;

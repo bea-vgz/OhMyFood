@@ -440,6 +440,14 @@ body {
     padding-left: 0;
   }
 
+  .purple-option {
+    background-color: #ddbfff75;
+  }
+  .purple-option__icon {
+    color: #9356DC;
+    margin-left: 1rem;
+  }
+
   .container_restaurants {
     background-color: #F6F6F6;
     display: flex;
