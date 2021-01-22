@@ -153,9 +153,8 @@ body {
   align-items: center;
   margin-left: -1.75rem;
 }
-.container_fonctionnement i {
-  color: #353535;
-  opacity: 0.5;
+.container_fonctionnement__icone {
+  color: #3535356e;
   margin-left: 1rem;
 }
 .container_fonctionnement a {
@@ -165,10 +164,19 @@ body {
   text-decoration: none;
   color: black;
   margin-left: 1.5rem;
+  opacity: 1;
 }
 .container_fonctionnement__titre {
   padding-top: 2.5rem;
   padding-left: 1rem;
+}
+
+.purple-option {
+  background-color: #ddbfff75;
+}
+.purple-option__icon {
+  color: #9356DC;
+  margin-left: 1rem;
 }
 
 .intro_site {
@@ -247,8 +255,15 @@ body {
 .cartouche_restaurants__texte {
   margin-top: 0.3rem;
 }
+.cartouche_restaurants__coeur {
+  color: black;
+  font-family: FontAwesome;
+  text-decoration: inherit;
+}
 .cartouche_restaurants__coeur:hover {
-  color: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  transition-duration: 0.7s;
+  cursor: pointer;
 }
 
 #container_footer {

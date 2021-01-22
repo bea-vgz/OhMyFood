@@ -87,9 +87,8 @@
                         align-items: center;
                         margin-left: -1.75rem;
                     }
-                        & i {
-                            color: $colour-quinary;
-                            opacity: 0.5;
+                        &__icone {
+                            color: $colour-quinary-opacity;
                             margin-left: 1rem;
                         }
                             & a {
@@ -99,11 +98,19 @@
                                 text-decoration: none;
                                 color: black;
                                 margin-left: 1.5rem;
+                                opacity: 1;
                             }
                                 &__titre {
                                     padding-top: 2.5rem;
                                     padding-left: 1rem;
                                 }
+    }
+    .purple-option {
+        background-color: $colour-purple-opacity;
+        &__icon {
+            color: $colour-primary;
+            margin-left: 1rem;
+        }
     }
     .intro_site {
         background-color: $colour-quaternary;
@@ -165,11 +172,17 @@
                                             margin-top: 0.3rem;
                                         }
                                             &__coeur {
-                                                &:hover {
-                                                    color: linear-gradient($colour-secondary, $colour-primary);
-                                                }
+                                                color: black;
+                                                font-family: FontAwesome;
+                                                text-decoration: inherit;
+                                                    &:hover {
+                                                        background-image: linear-gradient($colour-secondary, $colour-primary);
+                                                        transition-duration: 0.7s;
+                                                        cursor: pointer;
+                                                    }
                                             }
     }
+    
     #container_footer {
         background-color: map-get($background-color, gris_fonce);
         max-width: 100%;
