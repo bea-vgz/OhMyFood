@@ -1,4 +1,4 @@
-/* Mobile first Homepage */
+/* Mobile first Homepage - @media screen and (max-width: 480px) */
 
     @mixin mobile {
         @media screen and (max-width: 480px){
@@ -37,6 +37,7 @@
         text-align: center;
         box-shadow: 0 0 0.5rem #0000002e;
         z-index: 1;
+        position: relative;
     }
     .container_localisation {
         display: flex;
@@ -201,11 +202,11 @@
                         color: $colour-tertiary;
                     }
                 }
-                    &__categorie {
-                        padding-bottom: 0.5rem;
-                    }
-    }
-    .categorie_icon {
-        padding-right: 0.5rem;
-        width: 1.2rem;
+                        &__categorie {
+                            padding-bottom: 0.5rem;
+                        }
+                            &__icon {
+                                padding-right: 0.5rem;
+                                width: 1.2rem;
+                            }
     }
