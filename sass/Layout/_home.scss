@@ -173,12 +173,13 @@
                                             margin-top: 0.3rem;
                                         }
                                             &__coeur {
-                                                color: black;
-                                                font-family: FontAwesome;
+                                                font-family: "Font Awesome 5 Free";
                                                 text-decoration: inherit;
                                                     &:hover {
                                                         background-image: linear-gradient($colour-secondary, $colour-primary);
                                                         transition-duration: 0.7s;
+                                                        background-clip: content-box;
+                                                        object-fit: cover;
                                                         cursor: pointer;
                                                     }
                                             }

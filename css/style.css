@@ -259,13 +259,14 @@ body {
   margin-top: 0.3rem;
 }
 .cartouche_restaurants__coeur {
-  color: black;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
   text-decoration: inherit;
 }
 .cartouche_restaurants__coeur:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   transition-duration: 0.7s;
+  background-clip: content-box;
+  object-fit: cover;
   cursor: pointer;
 }
 
@@ -425,8 +426,8 @@ body {
     margin-right: 1.5rem;
     flex: 1;
   }
-  .container_fonctionnement i {
-    color: #353535;
+  .container_fonctionnement__icone {
+    color: #3535356e;
     margin-left: 1rem;
   }
   .container_fonctionnement a {
