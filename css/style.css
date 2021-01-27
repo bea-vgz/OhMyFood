@@ -259,14 +259,14 @@ body {
   margin-top: 0.3rem;
 }
 .cartouche_restaurants__coeur {
-  font-family: "Font Awesome 5 Free";
+  display: block;
+  font: "Font Awesome";
   text-decoration: inherit;
 }
 .cartouche_restaurants__coeur:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   transition-duration: 0.7s;
-  background-clip: content-box;
-  object-fit: cover;
+  background-clip: text;
   cursor: pointer;
 }
 
