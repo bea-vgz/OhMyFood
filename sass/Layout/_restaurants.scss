@@ -46,6 +46,22 @@
                 text-decoration: none;
                 color: black;
             }
+                &__coeur {
+                    position: relative;
+                        .coeur--inactif {
+                        display: block;
+                        position: absolute;
+                        background-color: $colour-quaternary;
+                        }
+                            &:hover .coeur {
+                                &--actif {
+                                    @include activation_coeur;
+                                }
+                                &--inactif {
+                                    display: none;
+                                }
+                            }
+                }
     }
     .container_rts {
         padding: 1.2rem;

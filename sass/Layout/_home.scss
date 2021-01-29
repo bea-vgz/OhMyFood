@@ -173,18 +173,22 @@
                                             margin-top: 0.3rem;
                                         }
                                             &__coeur {
-                                                display: block;
-                                                font: "Font Awesome";
-                                                text-decoration: inherit;
-                                                    &:hover {
-                                                        background-image: linear-gradient($colour-secondary, $colour-primary);
-                                                        transition-duration: 0.7s;
-                                                        background-clip: text;
-                                                        cursor: pointer;
+                                                position: relative;
+                                                    .coeur--inactif {
+                                                        display: block;
+                                                        position: absolute;
+                                                        background-color: white!important;
+                                                    }
+                                                    &:hover .coeur {
+                                                        &--actif {
+                                                            @include activation_coeur;
+                                                        }
+                                                        &--inactif {
+                                                            display: none;
+                                                        }
                                                     }
                                             }
     }
-    
     #container_footer {
         background-color: map-get($background-color, gris_fonce);
         max-width: 100%;
@@ -210,4 +214,4 @@
                                 padding-right: 0.5rem;
                                 width: 1.2rem;
                             }
-    }
+    }                       

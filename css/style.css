@@ -259,15 +259,28 @@ body {
   margin-top: 0.3rem;
 }
 .cartouche_restaurants__coeur {
-  display: block;
-  font: "Font Awesome";
-  text-decoration: inherit;
+  position: relative;
 }
-.cartouche_restaurants__coeur:hover {
+.cartouche_restaurants__coeur .coeur--inactif {
+  display: block;
+  position: absolute;
+  background-color: white !important;
+}
+.cartouche_restaurants__coeur:hover .coeur--actif {
+  display: block;
   background-image: linear-gradient(#FF79DA, #9356DC);
-  transition-duration: 0.7s;
+  opacity: 1;
   background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition-duration: 0.35s;
+  transform: scale(1);
+  transform-origin: center;
   cursor: pointer;
+  animation-delay: 0s;
+}
+.cartouche_restaurants__coeur:hover .coeur--inactif {
+  display: none;
 }
 
 #container_footer {
@@ -534,6 +547,30 @@ body {
 .header_menu_rts a {
   text-decoration: none;
   color: black;
+}
+.header_menu_rts__coeur {
+  position: relative;
+}
+.header_menu_rts__coeur .coeur--inactif {
+  display: block;
+  position: absolute;
+  background-color: #F6F6F6;
+}
+.header_menu_rts__coeur:hover .coeur--actif {
+  display: block;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition-duration: 0.35s;
+  transform: scale(1);
+  transform-origin: center;
+  cursor: pointer;
+  animation-delay: 0s;
+}
+.header_menu_rts__coeur:hover .coeur--inactif {
+  display: none;
 }
 
 .container_rts {
