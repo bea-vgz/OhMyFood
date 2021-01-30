@@ -54,7 +54,7 @@ h2 {
 h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 h4 {
@@ -65,7 +65,7 @@ h4 {
 h5 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 /* Mobile first Homepage - @media screen and (max-width: 480px) */
@@ -137,10 +137,10 @@ body {
   background-color: #F6F6F6;
   height: 2rem;
   border-radius: 1rem;
-  padding: 1rem 1rem;
+  padding: 1.2rem 1.2rem;
   align-items: center;
-  box-shadow: 0 0 10px #0000002e;
-  margin-bottom: 1rem;
+  box-shadow: 0.2rem 0.2rem 12px #0000002e;
+  margin-bottom: 1.2rem;
 }
 .container_fonctionnement__options::before {
   counter-increment: compteListe 1;
@@ -162,7 +162,7 @@ body {
 }
 .container_fonctionnement a {
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   text-decoration: none;
   color: black;
@@ -175,7 +175,7 @@ body {
 }
 
 .purple-option {
-  background-color: #ddbfff75;
+  background-color: #ddbfff56;
 }
 .purple-option__icon {
   color: #9356DC;
@@ -273,7 +273,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition-duration: 0.35s;
+  transition-duration: 0.25s;
   transform: scale(1);
   transform-origin: center;
   cursor: pointer;
@@ -291,8 +291,8 @@ body {
 .container_footer {
   color: white;
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  font-weight: lighter;
+  font-size: 1.1rem;
+  font-weight: 400;
   padding: 1.2rem;
   padding-bottom: 3rem;
 }
@@ -391,8 +391,8 @@ body {
   .container_footer {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: lighter;
+    font-size: 1.1rem;
+    font-weight: 400;
     padding: 1.2rem;
     padding-bottom: 3rem;
     width: 80%;
@@ -445,7 +445,7 @@ body {
   }
   .container_fonctionnement a {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
     color: inherit;
@@ -457,7 +457,7 @@ body {
   }
 
   .purple-option {
-    background-color: #ddbfff75;
+    background-color: #ddbfff56;
   }
   .purple-option__icon {
     color: #9356DC;
@@ -479,8 +479,8 @@ body {
   .container_footer {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: lighter;
+    font-size: 1.1rem;
+    font-weight: 400;
     padding: 1.2rem;
     padding-bottom: 3rem;
     justify-content: space-between;
@@ -563,7 +563,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition-duration: 0.35s;
+  transition-duration: 0.25s;
   transform: scale(1);
   transform-origin: center;
   cursor: pointer;
@@ -771,6 +771,11 @@ body {
 .intro_site_button:hover, .commande_button:hover {
   box-shadow: 0.25rem 0.25rem 16px #0000007a;
   opacity: 0.9;
+}
+
+.commande_button {
+  margin-top: -1rem;
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

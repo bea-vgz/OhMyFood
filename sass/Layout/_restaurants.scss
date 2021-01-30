@@ -49,9 +49,9 @@
                 &__coeur {
                     position: relative;
                         .coeur--inactif {
-                        display: block;
-                        position: absolute;
-                        background-color: $colour-quaternary;
+                            display: block;
+                            position: absolute;
+                            background-color: $colour-quaternary;
                         }
                             &:hover .coeur {
                                 &--actif {

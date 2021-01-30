@@ -69,10 +69,10 @@
                     background-color: map-get($background-color, gris_clair);
                     height: 2rem;
                     border-radius: 1rem;
-                    padding: 1rem 1rem;
+                    padding: 1.2rem 1.2rem;
                     align-items: center;
-                    box-shadow: 0 0 10px #0000002e;
-                    margin-bottom: 1rem;
+                    box-shadow: 0.2rem 0.2rem 12px #0000002e;
+                    margin-bottom: 1.2rem;
                 }
                     &__options::before {
                         counter-increment: compteListe 1;
