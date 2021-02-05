@@ -258,29 +258,37 @@ body {
 .cartouche_restaurants__texte {
   margin-top: 0.3rem;
 }
-.cartouche_restaurants__coeur {
+
+.coeur {
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent 0px solid;
   position: relative;
 }
-.cartouche_restaurants__coeur .coeur--inactif {
-  display: block;
+.coeur::before {
   position: absolute;
-  background-color: white !important;
-}
-.cartouche_restaurants__coeur:hover .coeur--actif {
-  display: block;
+  opacity: 0;
+  transition: 0.25s;
+  content: "";
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient(#FF79DA, #9356DC);
-  opacity: 1;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition-duration: 0.25s;
-  transform: scale(1);
-  transform-origin: center;
-  cursor: pointer;
-  animation-delay: 0s;
 }
-.cartouche_restaurants__coeur:hover .coeur--inactif {
-  display: none;
+.coeur:hover::before {
+  background-color: black;
+  opacity: 1;
+}
+.coeur__heart--actif {
+  opacity: 1;
+  position: absolute;
+  transition-duration: 0.25s;
+  background-color: white;
+  top: 0;
+  left: 0;
+  mix-blend-mode: lighten;
+}
+.coeur__heart:hover--inactif {
+  opacity: 0;
 }
 
 #container_footer {
@@ -548,29 +556,37 @@ body {
   text-decoration: none;
   color: black;
 }
-.header_menu_rts__coeur {
+
+.coeur {
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent 0px solid;
   position: relative;
 }
-.header_menu_rts__coeur .coeur--inactif {
-  display: block;
+.coeur::before {
   position: absolute;
-  background-color: #F6F6F6;
-}
-.header_menu_rts__coeur:hover .coeur--actif {
-  display: block;
+  opacity: 0;
+  transition: 0.25s;
+  content: "";
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient(#FF79DA, #9356DC);
-  opacity: 1;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition-duration: 0.25s;
-  transform: scale(1);
-  transform-origin: center;
-  cursor: pointer;
-  animation-delay: 0s;
 }
-.header_menu_rts__coeur:hover .coeur--inactif {
-  display: none;
+.coeur:hover::before {
+  background-color: black;
+  opacity: 1;
+}
+.coeur__heart--actif {
+  opacity: 1;
+  position: absolute;
+  transition-duration: 0.25s;
+  background-color: #F6F6F6;
+  top: 0;
+  left: 0;
+  mix-blend-mode: lighten;
+}
+.coeur__heart:hover--inactif {
+  opacity: 0;
 }
 
 .container_rts {

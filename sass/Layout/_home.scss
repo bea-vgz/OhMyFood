@@ -172,22 +172,42 @@
                                         &__texte {
                                             margin-top: 0.3rem;
                                         }
-                                            &__coeur {
-                                                position: relative;
-                                                    .coeur--inactif {
-                                                        display: block;
-                                                        position: absolute;
-                                                        background-color: white!important;
-                                                    }
-                                                    &:hover .coeur {
-                                                        &--actif {
-                                                            @include activation_coeur;
-                                                        }
-                                                        &--inactif {
-                                                            display: none;
-                                                        }
-                                                    }
-                                            }
+                                    }
+                                
+    .coeur {
+        cursor: pointer;
+        background-color: transparent;
+        border: transparent 0px solid;
+        position: relative;
+            &::before {
+                position: absolute;
+                opacity: 0;
+                transition: 0.25s;
+                content: "";
+                height: 100%;
+                width: 100%;
+                background-image: linear-gradient($colour-secondary, $colour-primary);
+                }
+                    &:hover::before {
+                        background-color: black;
+                        opacity: 1;
+                    }
+                        &__heart {
+                            &--actif {
+                                opacity: 1;
+                                position: absolute;
+                                transition-duration: 0.25s;
+                                background-color: white;
+                                top: 0;
+                                left: 0;
+                                mix-blend-mode: lighten;
+                            }
+                                &:hover {
+                                    &--inactif {
+                                        opacity: 0;
+                                    }
+                                }
+                        }     
     }
     #container_footer {
         background-color: map-get($background-color, gris_fonce);
