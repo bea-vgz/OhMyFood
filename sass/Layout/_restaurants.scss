@@ -75,10 +75,8 @@
                                 left: 0;
                                 mix-blend-mode: lighten;
                             }
-                                &.coeur :hover {
-                                    &--inactif2 {
+                                &--inactif2:hover {
                                         opacity: 0;
-                                    }
                                 }
                         }     
     }

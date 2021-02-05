@@ -287,7 +287,7 @@ body {
   left: 0;
   mix-blend-mode: lighten;
 }
-.coeur__heart.coeur :hover--inactif {
+.coeur__heart--inactif:hover {
   opacity: 0;
 }
 
@@ -585,7 +585,7 @@ body {
   left: 0;
   mix-blend-mode: lighten;
 }
-.coeur__heart.coeur :hover--inactif2 {
+.coeur__heart--inactif2:hover {
   opacity: 0;
 }
 
