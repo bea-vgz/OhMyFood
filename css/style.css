@@ -576,7 +576,7 @@ body {
   background-color: black;
   opacity: 1;
 }
-.coeur__heart--actif {
+.coeur__heart--actif2 {
   opacity: 1;
   position: absolute;
   transition-duration: 0.25s;
@@ -585,7 +585,7 @@ body {
   left: 0;
   mix-blend-mode: lighten;
 }
-.coeur__heart:hover--inactif {
+.coeur__heart:hover--inactif2 {
   opacity: 0;
 }
 

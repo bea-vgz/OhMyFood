@@ -66,7 +66,7 @@
                         opacity: 1;
                     }
                         &__heart {
-                            &--actif {
+                            &--actif2 {
                                 opacity: 1;
                                 position: absolute;
                                 transition-duration: 0.25s;
@@ -76,7 +76,7 @@
                                 mix-blend-mode: lighten;
                             }
                                 &:hover {
-                                    &--inactif {
+                                    &--inactif2 {
                                         opacity: 0;
                                     }
                                 }
